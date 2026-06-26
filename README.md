@@ -36,10 +36,10 @@ A production-grade Open Agent Management Protocol (OpAMP) supervisor for managin
 ## Features
 
 - **OpAMP Protocol**: Full OpAMP WebSocket client for agent management
-- **Artifactory Integration**: Download and upgrade collector binaries from Artifactory
+- **Compont Binary Upgrade using Supervisor RPM**: Binary upgrades using rpm to be fetched from the unix repo.
 - **RBAC**: Role-based access control via OIDC (Azure AD, Okta, Keycloak)
 - **Web UI**: React-based management dashboard (embedded in binary)
-- **Config Management**: Compose remote, local, and dynamic config sections
+- **Config Management**: Compose remote, local, and dynamic config sections. Collectors configuration to be saved and pushed from the github repo.
 - **Health Monitoring**: Automatic health checks and reporting
 - **Single Binary**: Go binary with embedded React frontend
 
@@ -87,7 +87,6 @@ See [configs/supervisor.example.yaml](configs/supervisor.example.yaml) for confi
 
 | Variable | Description |
 |----------|-------------|
-| `ARTIFACTORY_API_TOKEN` | Artifactory API token |
 | `OIDC_CLIENT_ID` | OIDC client ID |
 | `OIDC_CLIENT_SECRET` | OIDC client secret |
 | `OPAMP_SERVER_URL` | OpAMP server WebSocket URL |
