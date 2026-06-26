@@ -1,0 +1,40 @@
+# OpAMP Control Pane Configuration
+# Copy this file to supervisor.yaml and fill in your values.
+
+server:
+  # OpAMP server WebSocket endpoint
+  endpoint: "wss://opamp.example.com/v1/opamp"
+
+agent:
+  # Path to the OpenTelemetry Collector binary
+  executable: "/usr/bin/otelcol"
+
+artifactory:
+  # JFrog Artifactory configuration for collector binary downloads
+  base_url: "https://your-org.jfrog.io/artifactory"
+  repo_key: "otel-collector-binaries"
+  # API token can be set via ARTIFACTORY_API_TOKEN environment variable
+  api_token: ""
+  insecure_tls: false
+
+api:
+  # Management API listen address
+  listen: ":8080"
+
+auth:
+  # OIDC Authentication (optional)
+  provider: "oidc"
+  issuer_url: "https://login.your-org.com/v2.0/"
+  client_id: "${OIDC_CLIENT_ID}"
+  client_secret: "${OIDC_CLIENT_SECRET}"
+  redirect_url: "https://supervisor.your-org.com/auth/callback"
+  
+  # Role mapping (role names from your identity provider)
+  admin_role: "supervisor-admin"
+  deployer_role: "supervisor-operator"
+  viewer_role: "supervisor-viewer"
+  
+  # Group-based mapping (for Azure AD groups)
+  admin_group: "opamp-admins"
+  deployer_group: "opamp-operators"
+  viewer_group: "opamp-viewers"
