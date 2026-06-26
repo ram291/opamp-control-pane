@@ -14,7 +14,7 @@ A production-grade Open Agent Management Protocol (OpAMP) supervisor for managin
 │  │  • OpAMP WebSocket Client    │   │                      │  │
 │  │  • Collector Process Manager │   │  • Agent management  │  │
 │  │  • Binary Upgrade from       │   │  • Config management │  │
-│  │    Artifactory               │   │  • Upgrade triggers  │  │
+│  │    rpm                       │   │  • Upgrade triggers  │  │
 │  │  • Config Composition        │   │  • Health monitoring │  │
 │  │  • Health Monitoring         │   │  • RBAC (OIDC)       │  │
 │  └──────────────┬───────────────┘   └──────────┬───────────┘  │
