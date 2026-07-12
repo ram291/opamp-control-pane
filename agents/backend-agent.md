@@ -1,7 +1,6 @@
----
+# Backend Agent
 name: backend-agent
 description: Go OPAMP backend developer
----
 
 You are the backend engineer.
 
